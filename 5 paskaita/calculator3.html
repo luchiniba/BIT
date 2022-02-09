@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 1px;
+            row-gap: 2px;
+            width: 250px;
+            height: 450px;
+            text-align: center;
+        }
+        
+        .grid-container>div {
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            font-size: 2em;
+        }
+        
+        .grid-container>:last-child {
+            background-color: orange;
+        }
+        
+        .grid-container>:first-child {
+            align-self: stretch;
+            padding-top: 50px;
+        }
+        
+        .display {
+            grid-column: 1 / 5;
+            ;
+            pointer-events: none;
+        }
+        
+        .grid-container>:nth-child(9) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(3) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(2) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(4) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(17) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(13) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(5) {
+            background-color: orange;
+        }
+        
+        .zero {
+            display: grid;
+            grid-column: span 2;
+        }
+        
+        .grid-container>div:hover {
+            background-color: rgb(12, 184, 184);
+        }
+        
+        .calc-numbers {
+            font-family: 'Space Mono', serif;
+            background-color: grey;
+            color: white;
+            font-size: 2em;
+            border: 0;
+            padding: 0.3em;
+            text-align: right;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <body>
+        <div class="grid-container">
+            <div class="display">
+
+                <input type="text" class="calc-numbers" value="0">
+
+            </div>
+            <div>AC</div>
+            <div>+/-</div>
+            <div>%</div>
+            <div>/</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>X</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+            <div class="zero">
+                <div>0</div>
+            </div>
+            <div>.</div>
+            <div>=</div>
+
+        </div>
+    </body>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FlexBox</title>
+</head>
+
+<style>
+    .mainContainer {
+        height: 600px;
+        width: 750px;
+        border: 4px rgba(209, 206, 5, 0.671) solid;
+        display: flex;
+        flex-flow: column;
+        padding-block: 20px;
+        padding-inline: 20px;
+        row-gap: 20px;
+        background-color: black;
+    }
+    
+    .mainContainer>div {
+        gap: 50px;
+    }
+    
+    .mainContainer>:first-child {
+        flex-grow: 1;
+        display: flex;
+    }
+    
+    .mainContainer>:first-child>div {
+        flex-grow: 1;
+        display: flex;
+        gap: 80px;
+    }
+    
+    .mainContainer>:first-child>:nth-child(2) {
+        flex-grow: 3;
+    }
+    
+    .mainContainer>:first-child>div>div {
+        border: 4px rgb(17, 31, 235) solid;
+        flex: auto;
+    }
+    
+    .mainContainer>:nth-child(2) {
+        flex-grow: 5;
+        display: flex;
+    }
+    
+    .mainContainer>:nth-child(2)>div {
+        flex: auto;
+        display: flex;
+    }
+    
+    .mainContainer>:nth-child(2)>:first-child {
+        flex-grow: 1;
+        border: 4px rgb(255, 0, 21) solid;
+    }
+    
+    .mainContainer>:nth-child(2)>:nth-child(2) {
+        flex-grow: 2;
+        flex-flow: column;
+    }
+    
+    .secondContainer {
+        display: flex;
+        row-gap: 20px;
+    }
+    
+    .secondContainer>:first-child {
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column;
+        row-gap: 30px;
+        padding-top: 20px;
+    }
+    
+    .secondContainer>:first-child>div {
+        border: 4px rgb(255, 251, 0) solid;
+        flex-grow: 1;
+    }
+    
+    .thirdContainer {
+        display: flex;
+        flex-grow: 2;
+        column-gap: 30px;
+    }
+    
+    .thirdContainer>div {
+        display: flex;
+        flex-grow: 1;
+        flex-flow: column;
+        row-gap: 20px;
+    }
+    
+    .thirdContainer>:last-child {
+        border: 4px rgb(211, 36, 211) solid;
+    }
+    
+    .thirdContainer>div>div {
+        display: flex;
+        flex-grow: 1;
+        column-gap: 30px;
+    }
+    
+    .thirdContainer>div>div>div {
+        flex-grow: 1;
+        border: 4px rgb(31, 207, 84) solid;
+        column-gap: 10px;
+    }
+    
+    .thirdContainer>div>:nth-child(n+2) {
+        border: 4px rgb(139, 89, 255) solid;
+    }
+</style>
+
+<body>
+    <div class="mainContainer">
+        <div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div class="secondContainer">
+                <div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="thirdContainer">
+                    <div>
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

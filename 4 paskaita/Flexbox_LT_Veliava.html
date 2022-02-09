@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FlexBox_Veliava</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    .Flex {
+        display: flex;
+        width: 400px;
+        flex-flow: column;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+    .Flex:hover {
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 20px;
+        transition: 1s;
+    }
+    
+    .Flex>div {
+        display: flex;
+    }
+    
+    .Flex>div:first-child>div {
+        background-color: #FDB913;
+    }
+    
+    .Flex>div:nth-child(2)>div {
+        background-color: #006A44;
+    }
+    
+    .Flex>div:last-child>div {
+        background-color: #C1272D;
+    }
+    
+    .Flex>div>div {
+        border: 1.5px black solid;
+        height: 60px;
+        width: 60px;
+        color: black;
+        font-size: 52px;
+    }
+    
+    .Flex>div>div:hover {
+        background-color: rgb(0, 0, 0);
+    }
+</style>
+
+<body>
+    <div class="Flex">
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div><label>L </label></div>
+            <div><label>I</label></div>
+            <div><label>E</label></div>
+            <div><label>T</label></div>
+            <div><label>U</label></div>
+            <div><label>V</label></div>
+            <div><label>A</label></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

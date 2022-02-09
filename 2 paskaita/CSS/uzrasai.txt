@@ -1,0 +1,9 @@
+HMTL:
+
+Heade: scriptai, stiliai
+
+Body:galima keisti .pic dydzius
+
+CSS: Color sele
+
+<link rel="stylesheet"

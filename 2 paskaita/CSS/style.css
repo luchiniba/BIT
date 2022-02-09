@@ -1,0 +1,29 @@
+body {
+    background: rgb(255, 255, 255);
+}
+
+.Box {
+    background-color: rgb(89, 158, 19);
+    margin-left: 700px;
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 350px;
+    height: 200px
+}
+
+.prisijungti {
+    height: 5px;
+    height: 300px;
+    width: 400px;
+    margin-left: 160px;
+    padding-top: 25px;
+}
+
+h1 {
+    margin-left: 160px;
+}
+
+button {
+    background-color: #f44336;
+}
