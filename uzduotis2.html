@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uzduotis2</title>
+</head>
+<script>
+    function sudetis(num1, num2) {
+        return (num1 + num2)
+    }
+
+    function atimtis(num1, num2) {
+        return (num1 - num2)
+    }
+
+    function dalyba(num1, num2) {
+        return (num1 / num2)
+    }
+
+    function daugyba(num1, num2) {
+        return (num1 * num2)
+    }
+
+    function daugiauNei10(num1, num2, num3) {
+        if (sudetis(num1, num2) > num3) {
+            console.log("sudetis >" + num3);
+        }
+        if (atimtis(num1, num2) > num3) {
+            console.log("atimtis >" + num3);
+        }
+        if (dalyba(num1, num2) > num3) {
+            console.log("dalyba >" + num3);
+        }
+        if (daugyba(num1, num2) > num3) {
+            console.log("daugyba >" + num3);
+        }
+    }
+
+    function daugiauNei25(num1, num2, num3) {
+        if (sudetis(num1, num2) > num3) {
+            console.log("sudetis >" + num3);
+        }
+        if (atimtis(num1, num2) > num3) {
+            console.log("atimtis >" + num3);
+        }
+        if (dalyba(num1, num2) > num3) {
+            console.log("dalyba >" + num3);
+        }
+        if (daugyba(num1, num2) > num3) {
+            console.log("daugyba >" + num3);
+        }
+    }
+
+    daugiauNei10(7, 5, 10);
+    daugiauNei25(7, 5, 25);
+</script>
+
+<body>
+
+</body>
+
+</html>

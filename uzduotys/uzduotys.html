@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzduotys</title>
+</head>
+<script>
+    //     ///1 uzduotis
+    //     //////////////
+
+    //     function nextEdge(side1, side2) {
+    //         var result = (side1 + side2) - 1;
+    //         return result;
+    //     }
+    //     console.log(nextEdge(10, 9))
+
+    //     ////////////
+
+    //     /2 uzduotis
+    //     ////////////
+
+    //     function nameString(name) {
+    //         var b = "Edabit"
+    //         var result = name + b;
+    //         return result;
+    //     }
+
+    //     /3 uzduotis
+    //     ////////////
+
+    //     function lessThan100(a, b) {
+    // 	if (a + b >= 100) {
+    //         return false 
+    //     } else {
+    //         return true
+    //     }
+    // }
+
+    //     ///4 uzduotis
+    //     //////////////
+
+    // function addUp(num) {
+    //   var result = 0;
+    //   for (var i = 1; i <= num; i++) {
+    //     result = result + i;
+    //   }
+    //   return result;
+    // }
+
+    //     ///5 uzduotis
+    //     //////////////
+
+
+
+
+
+    //     ///6 uzduotis
+    //     //////////////
+
+    // function num_of_digits(num) {
+    //     return num.toString().length;
+    // }
+    // }
+
+    //JS Uzduotys 02/23
+
+    // function minMax(arr) {
+    //     numbers = [45, 62, 78, 23, 79, 56, 32];
+    //     var minNumber = numbers[0];
+    //     var maxNumber = numbers[0];
+
+    //     for (var i = 0; i > numbers.lenght; i++) {
+
+    //         if (numbers[i] > minNumber) {
+    //             minNumber = numbers[i];
+    //         } else if (numbers[i] < maxNumber) {
+    //             maxNumber = numbers[i];
+    //         }
+    //     }
+
+    // }
+    // console.log(minNumber);
+    // console.log(maxNumber);
+
+    //////
+
+    // console.log(assertSimilar(minMax([14, 35, 6, 1, 34, 54]), [1, 54]),
+    //         console.log(assertSimilar(minMax([1.346, 1.6532, 1.8734, 1.8723]), [1.346, 1.8734]),
+    //             console.log(assertSimilar(minMax([0.432, 0.874, 0.523, 0.984, 0.327, 0.2345]), [0.2345, 0.984]),
+    //                 console.log(assertSimilar(minMax([13, 72, 98, 43, 24, 65, 31]), [13, 98]),
+    //                     console.log(assertSimilar(minMax([-54, -23, -54, -21]), [-54, -21]),
+    //                         console.log(assertSimilar(minMax([-0.473, -0.6834, -0.1287, 0.5632]), [-0.6834, 0.5632]),
+    //                             console.log(assertSimilar(minMax([0, 0, 0, 0]), [0, 0]),
+
+
+    //                                 function minMax(arr) {
+    //                                     var minNumber = Infinity;
+    //                                     var maxNumber = -Infinity;
+
+    //                                     arr.forEach(number => {
+    //                                         if (skaicius > maxNumber) {
+    //                                             maxNumber = skaicius;
+    //                                         }
+    //                                         if (skaicius < minNumber) {
+    //                                             minNumber = skaicius;
+    //                                         }
+    //                                     });
+    //                                     console.log(minNumber, maxNumber);
+    //                                     return [minNumber, maxNumber];
+    //                                 };
+
+    //                                 function assertSimilar(a, b) {
+    //                                     return Array.isArray(a) &&
+    //                                         Array.isArray(b) &&
+    //                                         a.length === b.length &&
+    //                                         a.every((val, index) => val === b[index]);
+    //                                 }
+
+    /////////////////
+
+    //2 uzduotis
+
+    // function potatoes(str) {
+    //     return str.split("potato").length - 1;
+    // }
+
+    // function assertEquals(x, y) {
+    //     return x === y;
+    // }
+
+    // console.log(assertEquals(potatoes("potato"), 1))
+    // console.log(assertEquals(potatoes("potatopotatocherry"), 2))
+    // console.log(assertEquals(potatoes("potatopotatopotatoorange"), 3))
+    // console.log(assertEquals(potatoes("potatopotatobananapotatopotato"), 4))
+    // console.log(assertEquals(potatoes("potatopotatomangopotatopotatopotato"), 5))
+    // console.log(assertEquals(potatoes("potatocucumberpotatopotatopotatopotatopotato"), 6))
+
+    //3 uzduotis
+    // function findNameAndProffesion(text) {
+    // var startName = text.indexOf("{") + 1;
+    // var endName = text.indexOf("}")
+    // var startprofesion = text.lastIndexOf("{") + 1;
+    // var endprofesion = text.lastIndexOf("}");
+
+    // var vardas = text.slice(startName, endName);
+    // var profesion = text.slice(startprofesion, endprofesion);
+
+    // console.log(`vardas: ${vardas} \n profesion: ${profesion}`);
+
+    /////////////////////////////////////////////////////////////////
+    //KITA UZDUOTIS
+
+    //     var startName = text.indexOf("{") + 1;
+    //     var endName = text.indexOf("}");
+
+    //     var lenght = text.length;
+    //     var newText = text.slice(++endName, lenght);
+
+    //     var startprofesion = newText.indexOf("{") + 1;
+    //     var endprofesion = newText.indexOf("}");
+
+    //     var Vname = text.slice(startName, --endName);
+    //     var Profesion = newText.slice(startprofesion, endprofesion);
+
+    //     return [Vname, Profesion];
+    // }
+    // console.log(findNameAndProffesion("Mano vardas {Lukas}, as esu {programuotojas}"));
+
+    ///////////////////////////////////////////////////////////
+
+    // function numbers(number) {
+    //     if (number == 0) {
+    //         console.log("nulis");
+    //     } else if (number == 1) {
+    //         console.log("vienas");
+    //     } else if (number == 1) {
+    //         console.log("vienas");
+    //     } else if (number == 2) {
+    //         console.log("du");
+    //     } else if (number == 3) {
+    //         console.log("trys");
+    //     } else if (number == 4) {
+    //         console.log("keturi");
+    //     } else if (number == 5) {
+    //         console.log("penki");
+    //     } else if (number == 6) {
+    //         console.log("sesi");
+    //     } else if (number == 7) {
+    //         console.log("septyni");
+    //     } else if (number == 8) {
+    //         console.log("astuoni");
+    //     } else if (number == 9) {
+    //         console.log("devyni");
+
+    //     }
+    // }
+    // numbers(0);
+    // numbers(1);
+    // numbers(2);
+    // numbers(3);
+    // numbers(4);
+    // numbers(5);
+    // numbers(6);
+    // numbers(7);
+    // numbers(8);
+    // numbers(9);
+
+    //////////////////////////////
+
+    // function skaiciai(number) {
+    //     switch (number) {
+    //         case 0:
+    //             console.log("nulis");
+    //             break;
+    //         case 1:
+    //             console.log("vienas");
+    //             break;
+    //         case 2:
+    //             console.log("du");
+    //             break;
+    //         case 3:
+    //             console.log("trys");
+    //             break;
+    //         case 4:
+    //             console.log("keturi");
+    //             break;
+    //         case 5:
+    //             console.log("penki");
+    //             break;
+    //         case 6:
+    //             console.log("sesi");
+    //             break;
+    //         case 7:
+    //             console.log("septyni");
+    //             break;
+    //         case 8:
+    //             console.log("astuoni");
+    //             break;
+    //         case 9:
+    //             console.log("devyni");
+    //             break;
+    //         default:
+    //             console.log("maziau uz 0 arba daugiau uz 9");
+
+    //             break;
+    //     }
+    // }
+    // skaiciai(0);
+    // skaiciai(1);
+    // skaiciai(24);
+    // skaiciai(3);
+    // skaiciai(4);
+    // skaiciai(498);
+    // skaiciai(6);
+    // skaiciai(7);
+    // skaiciai(46);
+    // skaiciai(9);
+
+    ////////////////////////////////////////////////////
+
+
+    // function numbers(number) {
+    //     if (number > -Infinity) {
+    //         if (number >= 0) {
+    //             if (number >= 1) {
+    //                 if (number >= 2) {
+    //                     if (number >= 3) {
+    //                         if (number >= 4) {
+    //                             if (number >= 5) {
+    //                                 if (number >= 5) {
+    //                                     return "daugiau nei 5 arba maziau nei 0"
+    //                                 }
+    //                                 return "penki"
+    //                             }
+    //                             return "keturi"
+    //                         }
+    //                         return "trys"
+    //                     }
+    //                     return "du"
+    //                 }
+    //                 return "vienas"
+    //             }
+    //             return "nulis"
+    //         }
+    //         return "maziau nei nulis";
+    //     }
+    // }
+    // console.log(numbers(0));
+    // console.log(numbers(5));
+    // console.log(numbers(50));
+    // console.log(numbers(-3));
+    // console.log(numbers(4));
+    // console.log(numbers(6));
+
+
+    ////////////////////////////////////////////
+
+    // function greeting(name) {
+    //     if (name === "Mubashir") {
+    //         return "Hello, my Love!";
+    //     } else(name != "Mubashir")
+    //     return "Hello, " + name + "!";
+    // }
+
+    // console.log(greeting("Matt"))
+    // console.log(greeting("Helen"))
+    // console.log(greeting("Mubashir"))
+
+    ////////////////////////////////////////////
+
+    // function generationCalculator(x, y) {
+    //     var isMale = y.toLowercase() == 'm';
+
+    //     switch (x) {
+    //         case -3:
+    //             return isMale ? 'great grandfather' : 'great grandmother'
+    //             break;
+    //         case -2:
+    //             return isMale ? 'grandfather' : 'grandmother'
+    //             break;
+    //         case -1:
+    //             return isMale ? 'father' : 'mother'
+    //             break;
+    //         case 0:
+    //             return isMale ? 'me!' : 'me!'
+    //             break;
+    //         case 1:
+    //             return isMale ? 'son' : 'daughter'
+    //             break;
+    //         case 2:
+    //             return isMale ? 'grandson' : 'granddaughter'
+    //             break;
+    //         case 3:
+    //             return isMale ? 'great grandson' : 'great granddaughter'
+    //             break;
+    //         default:
+    //             return isMale ? 'unrelated' : 'unrelated female'
+    //             break;
+    //     }
+    // }
+    // console.log(generationCalculator(-1, "f"));
+
+
+    /////////////////////////////////////////////
+
+    // function chunk(arr, size) {
+    //     if (arr.length < size) {
+    //         return [arr];
+    //     }
+    //     var answerArray = [];
+    //     var tempArray = [];
+    //     var count = 0;
+    //     var answerArrayCount = 0;
+
+    //     arr.forEach(arraynumber => {
+    //         if (count == size) {
+    //             count = 0;
+    //             answerArray[answerArrayCount] = tempArray;
+    //             tempArray = [];
+    //             answerArrayCount++;
+    //         }
+
+    //         tempArray[count] = arraynumber;
+    //         count++;
+    //     });
+
+    //     if (tempArray.length > 0) {
+    //         answerArray[answerArrayCount] = tempArray;
+    //     }
+    //     return answerArray;
+    // }
+
+    // chunk([1, 2, 3, 4], 2);
+
+    // function sayHelloBye(name, num) {
+    //     var upperCase = name.charAt(0).toUpperCase() + name.slice(1);
+    //     if (num === 1) {
+    //         return "Hello " + upperCase;
+    //     } else if (num === 0) {
+    //         return "Bye " + upperCase;
+    //     }
+    // }
+
+    // console.log(sayHelloBye("jose", 0))
+    // console.log(sayHelloBye("barry", 1))
+    // console.log(sayHelloBye("jan", 0))
+
+    ///////////////////////////////////////////////
+
+    // function equal(a, b, c) {
+
+    //     if (a == b && a == c) {
+    //         return 3;
+    //     }
+    //     if (a == b || b == c || a == c) {
+    //         return 2;
+    //     }
+    //     return 0;
+    // }
+
+    // console.log(equal(3, 3, 3))
+
+    //////////////////////////////////////////////////
+
+    // function isVowelSandwich(str) {
+    //     var consonants = ['b', 'c', 'd', 'f', 'g', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 's', 't', 'v', 'x', 'z', 'h', 'r', 'w', 'y'];
+    //     var vovels = ['a', 'e', 'i', 'o', 'u'];
+
+    // }
+
+
+
+    // console.log(isVowelSandwich("cat"), true)
+    // console.log(isVowelSandwich("ear"), false)
+    // console.log(isVowelSandwich("bake"), false)
+
+    ///////////////////////////////////////////////////
+    // var data = new Date('June 7, 1993');
+
+    // function dienuSkirtumas(datos) {
+    //     var data = new Date('1993');
+    //     var weekDay = data.getFullYear()
+
+    //     var options = {
+    //         weekDay: 'long'
+    //     }
+    // }
+    // console.log(dienuSkirtumas(new Intl.DateTimeFormat('lt-LT', options).format(data)));
+
+    ///////////////////////////////////////////////////////
+    // var date1 = new Date('02/28/2022');
+    // var date2 = new Date('06/07/1993');
+
+    // var difference = date1.getTime() - date2.getTime();
+
+    // var days = Math.ceil(difference / (1000 * 3600 * 24));
+
+    // console.log(days + ' dienu' + ' gyvas!');
+
+    //////////////////////////////////////////////////////
+
+    // function CountPromotion(timeYouWorkedHere, productivityKof, degree, salary, a) {
+    //     var salaryChange;
+    //     var timeRaise;
+    //     var productivityRaise;
+    //     var degreeRaise;
+    //     var newSalary;
+
+    //     if (timeYouWorkedHere >= 1) {
+    //         timeRaise = 300
+    //     } else if (timeYouWorkedHere > 2) {
+    //         timeRaise = 200
+    //     } else if (timeYouWorkedHere > 3) {
+    //         timeRaise = 150
+    //     } else if (timeYouWorkedHere > 5) {
+    //         timeRaise = 100
+    //     }
+
+
+    //     if (productivityKof >= 1) {
+    //         productivityRaise = productivityKof * 50
+    //     } else if (productivityKof >= 2) {
+    //         productivityRaise = productivityKof * 50
+    //     } else if (productivityKof >= 3) {
+    //         productivityRaise = productivityKof * 50
+    //     }
+
+    //     if (degree == "Entry") {
+    //         degreeRaise = 300
+    //     } else if (degree == "Junior") {
+    //         degreeRaise = 200
+    //     } else if (degree == "Mid") {
+    //         degreeRaise = 150
+    //     } else if (degree == "Senior") {
+    //         degreeRaise = 100
+    //     }
+
+    //     var salaryChange = salary + timeRaise + productivityRaise + degreeRaise;
+
+    //     // console.log(CountPromotion(1, 3, "Entry", 1000))
+    //     console.log(salaryChange);
+    //     if (a > 0) {
+    //         return CountPromotion(++timeYouWorkedHere, ++productivityKof, degree, salaryChange, --a);
+    //     }
+    //     return salaryChange;
+    // }
+    // console.log(CountPromotion(1, 3, "Entry", 1000, 5));
+
+    ///////////////////////////////////////////
+    // function moneta() {
+    //     var pasirinkimai = ["Herbas", "skaicius"];
+    //     var result = array[Math.floor(Math.random() * pasirinkimai.length)];
+    // }
+    // return moneta;
+    // console.log(result);
+
+    /////////////////////////////////////////
+
+    // function getRandomOS() {
+    //     var proc = Math.floor(Math.random() * 100000);
+
+    //     if (proc > 0 && proc < 75000) {
+    //         return "Windows"
+    //     } else if (proc < 82333) {
+    //         return "ChromeOS"
+    //     } else if (proc < 91666) {
+    //         return "MacOS"
+    //     } else if (proc < 100000) {
+    //         return "Linux"
+    //     }
+    // }
+
+    // function randomnessCounter(n) {
+
+    //     var winCounter = 0;
+    //     var macCounter = 0;
+    //     var linCounter = 0;
+    //     var chroCounter = 0;
+
+    //     for (var i = 0; i < n; i++) {
+    //         var result = getRandomOS();
+    //         switch (result) {
+    //             case "Windows":
+    //                 winCounter++;
+    //                 break;
+    //             case "MacOS":
+    //                 winCounter++;
+    //                 break;
+    //             case "Linux":
+    //                 winCounter++;
+    //                 break;
+    //             case "ChromeOS":
+    //                 winCounter++;
+    //                 break;
+    //         }
+    //         console.log(`Windows: ${winCounter} \n MacOS: ${macCounter} \ Linux: ${linCounter} \n ChromeOS: ${chroCounter}`);
+
+    //     }
+    //     randomnessCounter(10);
+    //     randomnessCounter(100);
+    //     randomnessCounter(1000);
+    //     randomnessCounter(10000);
+    //     randomnessCounter(100000);
+    //     randomnessCounter(1000000);
+    // }
+
+    ////////////////////////////////////////////
+
+    // var teisingas = false;
+    // while (!teisingas) {
+    //     var manoVardas = prompt("IVESKITE SAVO VARDA");
+
+    //     if (manoVardas != "Lukas") {
+    //         alert("VARDAS NETEISINGAS");
+    //     } else {
+    //         alert("VARDAS TEISINGAS")
+    //         break;
+    //     }
+    // }
+
+    // var slaptazodis = false;
+    // while (!slaptazodis) {
+    //     var password = prompt("IVESKITE SAVO SLAPTAZODI");
+
+    //     if (password != "BIT") {
+    //         alert("SLAPTAZODIS NETEISINGAS")
+    //     } else {
+    //         alert("SLAPTAZODIS TEISINGAS")
+    //         alert("SVEIKI PRISIJUNGE")
+    //         break;
+    //     }
+    // }
+
+    ////////////////////////////////////////////////
+    // function forDebugger() {
+
+    //     var kintamasis = false;
+    //     do {
+    //         console.log("do while")
+    //         kintamasis = false;
+    //     }
+    //     while (kintamasis)
+
+    //     kintamasis = true;
+    //     while (false) {
+    //         console.log("while")
+    //         kintamasis = false;
+    //     }
+    // }
+
+    // forDebugger()
+    ///////////////////////////////////////////////
+
+    // function forDebugger() {
+    //     var i = 0;
+
+    // while(i < 10) {
+    //         if(i > 5){
+    //             break;
+    //         }
+    //         i++
+    //         continue;
+    //         i++
+    //         i +- 100;
+    //     }
+    // }
+    // forDebugger()
+
+    // function forDebugger() {
+    //     const fruits = ["banana", "orange", "apple"];
+    //     fruits[6] = "lemon";
+
+    //     if (fruits.lenght > 4) {
+    //         var test = fruits[4];
+    //     }
+    // }
+    // forDebugger()
+
+    //////////////////////////////////////////////
+
+    // function herbasSkaicius() {
+    //     var rndm = Math.floor(Math.random() * 100);
+
+    //     if (rndm > 0 && rndm < 51) {
+    //         return "Herbas"
+    //     } else if (rndm < 100) {
+    //         return "Skaicius"
+    //     }
+
+    // }
+
+    // function randomCounter(n) {
+
+    //     var herbCounter = 0;
+    //     var skaicCounter = 0;
+
+    //     for (var i = 0; i < n; i++) {
+    //         var result = herbasSkaicius();
+    //         switch (result) {
+    //             case "Herbas":
+    //                 herbCounter++;
+    //                 break;
+    //             case "Skaicius":
+    //                 skaicCounter++;
+    //                 break;
+    //         }
+    //     }
+    //     console.log("Skaicius: " + skaicCounter + "; Herbas:" + herbCounter);
+
+    // }
+    // randomCounter(10);
+    // randomCounter(100);
+    // randomCounter(1000);
+    // randomCounter(10000);
+    // randomCounter(100000);
+    // randomCounter(1000000);
+
+
+    //////////////////////////////////////////
+    // function vardaiAtbulom() {
+    //     var vardai = ['Nina', 'Ozzie', 'Queenie', 'Pokey', 'Cubs', 'Wags', 'Ellie', 'Nibbles', 'Paris', 'Scarlett', 'Harpo', 'Chyna',
+    //         'Lexi', 'Kibbles', 'Susie', 'Rex', 'Blackjack', 'Snoop', 'Pumpkin', 'Ryder', 'Kirby', 'Sassy', 'Niki', 'Eddie', 'Latte',
+    //         'Buffy', 'Brittany', 'Buddie', 'Rambo', 'Scooby-doo', 'Tango', 'Snuffles', 'Felix', 'Rosy', 'BJ', 'Zippy', 'Lynx', 'Bongo',
+    //         'Buzzy', 'Chrissy', 'Justice', 'Rebel', 'Billy', 'Audi', 'Ranger', 'Puddles', 'Susie Q', 'Gator', 'Persy', 'Clancy', 'Madison',
+    //         'Waldo', 'Jingles', 'Baron', 'Raison', 'Jolly', 'Jester', 'Cherokee', 'Sammy', 'Zoie', 'Ruger', 'Jenna', 'Jolie', 'Speed',
+    //         'Kane', 'Sunny', 'Isabelle', 'Jess', 'Dandy', 'Bug', 'Nona', 'Porter', 'Trooper', 'Darwin', 'Babbles', 'Boo-boo',
+    //         'Cupcake', 'Gromit', 'Sadie', 'Angel', 'Kona', 'Tangles', 'Toffee', 'Morgan', 'Barney', 'Troy', 'Silver', 'Mini',
+    //         'Austin', 'Yin', 'Doodles', 'Jamie', 'Georgie', 'Woofie', 'Dodger', 'Slinky', 'Flake', 'Atlas', 'Phoenix', 'Beaux'
+    //     ];
+
+    //     var atbulai = vardai.length;
+    //     for (i = 1; i <= vardai.length; i++) {
+    //         console.log(vardai[atbulai - i]);
+    //     }
+    // }
+    // vardaiAtbulom()
+
+    ////////////////////////////////////////////
+
+    // function arVardasYra(vardas) {
+    //     var vardai = ['Nina', 'Ozzie', 'Queenie', 'Pokey', 'Cubs', 'Wags', 'Ellie', 'Nibbles', 'Paris', 'Scarlett', 'Harpo', 'Chyna',
+    //         'Lexi', 'Kibbles', 'Susie', 'Rex', 'Blackjack', 'Snoop', 'Pumpkin', 'Ryder', 'Kirby', 'Sassy', 'Niki', 'Eddie', 'Latte',
+    //         'Buffy', 'Brittany', 'Buddie', 'Rambo', 'Scooby-doo', 'Tango', 'Snuffles', 'Felix', 'Rosy', 'BJ', 'Zippy', 'Lynx', 'Bongo',
+    //         'Buzzy', 'Chrissy', 'Justice', 'Rebel', 'Billy', 'Audi', 'Ranger', 'Puddles', 'Susie Q', 'Gator', 'Persy', 'Clancy', 'Madison',
+    //         'Waldo', 'Jingles', 'Baron', 'Raison', 'Jolly', 'Jester', 'Cherokee', 'Sammy', 'Zoie', 'Ruger', 'Jenna', 'Jolie', 'Speed',
+    //         'Kane', 'Sunny', 'Isabelle', 'Jess', 'Dandy', 'Bug', 'Nona', 'Porter', 'Trooper', 'Darwin', 'Babbles', 'Boo-boo',
+    //         'Cupcake', 'Gromit', 'Sadie', 'Angel', 'Kona', 'Tangles', 'Toffee', 'Morgan', 'Barney', 'Troy', 'Silver', 'Mini',
+    //         'Austin', 'Yin', 'Doodles', 'Jamie', 'Georgie', 'Woofie', 'Dodger', 'Slinky', 'Flake', 'Atlas', 'Phoenix', 'Beaux'
+    //     ];
+    //     if (vardai.includes(vardas)) {
+    //         console.log("Taip");
+    //     } else {
+    //         console.log("Ne");
+    //     }
+    // }
+    // arVardasYra("Lukas")
+    // arVardasYra("Dandy")
+
+    ///////////////////////////////////////////////
+
+    // function sesiSimboliai() {
+    //     var vardai = ['Nina', 'Ozzie', 'Queenie', 'Pokey', 'Cubs', 'Wags', 'Ellie', 'Nibbles', 'Paris', 'Scarlett', 'Harpo', 'Chyna',
+    //         'Lexi', 'Kibbles', 'Susie', 'Rex', 'Blackjack', 'Snoop', 'Pumpkin', 'Ryder', 'Kirby', 'Sassy', 'Niki', 'Eddie', 'Latte',
+    //         'Buffy', 'Brittany', 'Buddie', 'Rambo', 'Scooby-doo', 'Tango', 'Snuffles', 'Felix', 'Rosy', 'BJ', 'Zippy', 'Lynx', 'Bongo',
+    //         'Buzzy', 'Chrissy', 'Justice', 'Rebel', 'Billy', 'Audi', 'Ranger', 'Puddles', 'Susie Q', 'Gator', 'Persy', 'Clancy', 'Madison',
+    //         'Waldo', 'Jingles', 'Baron', 'Raison', 'Jolly', 'Jester', 'Cherokee', 'Sammy', 'Zoie', 'Ruger', 'Jenna', 'Jolie', 'Speed',
+    //         'Kane', 'Sunny', 'Isabelle', 'Jess', 'Dandy', 'Bug', 'Nona', 'Porter', 'Trooper', 'Darwin', 'Babbles', 'Boo-boo',
+    //         'Cupcake', 'Gromit', 'Sadie', 'Angel', 'Kona', 'Tangles', 'Toffee', 'Morgan', 'Barney', 'Troy', 'Silver', 'Mini',
+    //         'Austin', 'Yin', 'Doodles', 'Jamie', 'Georgie', 'Woofie', 'Dodger', 'Slinky', 'Flake', 'Atlas', 'Phoenix', 'Beaux'
+    //     ];
+    //     var array = [];
+    //     for (let i = 0; i < vardai.length; i++) {
+    //         if (vardai[i].length >= 6) {
+    //             array.push(vardai[i]);
+    //             console.log(array);
+    //         }
+    //     }
+    // }
+    // sesiSimboliai()
+
+    ////////////////////////////////////////////////
+    // var array2D = [
+    //     [1, 6, 3, 7],
+    //     [9, 6, 9, 3],
+    //     [5, 6, 9]
+    // ]
+
+    // function Iteracija(arr) {
+    //     var counter = 0;
+    //     for (var i = 0; i < arr.length; i++) {
+    //         for (var j = 0; j < arr[i].length; j++) {
+    //             console.log(arr[i][j]);
+    //             counter++;
+    //         }
+    //     }
+    //     return counter;
+    // }
+    // console.log('Iteraciju Skaicius: ' + Iteracija(array2D))
+
+    ////////////////////////////////////////////////////
+    // var array2D = [
+    //     [1, 6, 3, 7],
+    //     [9, 6, 9, 3],
+    //     [5, 6, 9]
+    // ]
+
+    // function printArray(arr, n) {
+    //     for (var i = 0; i < arr.length; i++) {
+    //         console.log(arr[i][n]);
+    //     }
+    // }
+    // printArray(array2D, 0);
+    // printArray(array2D, 1);
+
+    /////////////////////////////////////////////////////
+
+    // var car1 = {
+    //     marke: "audi",
+    //     modelis: "A6",
+    //     metai: "2017",
+    //     spalva: "Juoda",
+    //     vidutinesKuroSanaudos: 10,
+    //     kuroTipas: "Dyzelinas",
+    //     pavaruDeze: "Automatic",
+    //     // PriceToDrive: function(kuroKainos) {
+    //     //     return kuroKainos[this.kuroTipas] * this.vidutinesKuroSanaudos;
+    //     // }
+    //     // PricetoDrive: function(kuroKainos) {
+    //     //     return 
+    //     // }
+    // }
+    // var car2 = {
+    //     marke: "bmw",
+    //     modelis: "5",
+    //     metai: "2015",
+    //     spalva: "Balta",
+    //     vidutinesKuroSanaudos: 8,
+    //     kuroTipas: "Benzinas",
+    //     pavaruDeze: "Mechanic",
+    //     // PriceToDrive: function(kuroKainos) {
+    //     //     return kuroKainos[this.kuroTipas] * this.vidutinesKuroSanaudos;
+    //     // }
+    // }
+    // var kuroKainos = {
+    //     Dyzelinas: 1.4,
+    //     Benzinas: 1.5,
+    //     Dujos: 0.7
+    // }
+
+    // function PriceToDrive(Car, kuroKainos) {
+    //     return Car.vidutinesKuroSanaudos * kuroKainos[Car.kuroTipas];
+    // }
+    // console.log(PriceToDrive(car1, kuroKainos))
+    // console.log(PriceToDrive(car2, kuroKainos))
+    // console.log(`Nuvaziuoti 100 km su ${car1.marke} ${car1.modelis} kainuoja ` + car1.PriceToDrive(kuroKainos) + "EUR");
+    // console.log(`Nuvaziuoti 100 km su ${car2.marke} ${car2.modelis} kainuoja ` + car2.PriceToDrive(kuroKainos) + "EUR");
+
+    /////////////////////////////////////////////
+
+    // arrayOfCars = [{
+    //     Marke: "Mercedes",
+    //     Modelis: "SL111",
+    //     Metai: 2015,
+    //     Spalva: "Pilka",
+    //     KuroSanaudos: 8.6,
+    //     KuroTipas: "Benzinas",
+    // }, {
+    //     Marke: "Audi",
+    //     Modelis: "A4",
+    //     Metai: 2018,
+    //     Spalva: "Melyna",
+    //     KuroSanaudos: 7.2,
+    //     KuroTipas: "Dyzelinas"
+
+    // }, {
+    //     Marke: "Fiat",
+    //     Modelis: "500",
+    //     Metai: 2012,
+    //     Spalva: "Zalia",
+    //     KuroSanaudos: 5.9,
+    //     KuroTipas: "Benzinas"
+    // }, {
+    //     Marke: "Audi",
+    //     Modelis: 80,
+    //     Metai: 1987,
+    //     Spalva: "mėlyna",
+    //     KuroSanaudos: 9.2,
+    //     KuroTipas: "Benzinas",
+    // }, {
+    //     Marke: "Ford",
+    //     Modelis: "Focus",
+    //     Metai: 1997,
+    //     Spalva: "žalia",
+    //     KuroSanaudos: 10.0,
+    //     KuroTipas: "Dujos",
+    // }, {
+    //     Marke: "Volkswagen",
+    //     Modelis: "Passat",
+    //     Metai: 2005,
+    //     Spalva: "sidabrinė",
+    //     KuroSanaudos: 5.8,
+    //     KuroTipas: "Dyzelis",
+    // }, {
+    //     Marke: "Toyota",
+    //     Modelis: "Corola",
+    //     Metai: 2007,
+    //     Spalva: "blue",
+    //     KuroSanaudos: 5,
+    //     KuroTipas: "Benzinas"
+    // }, {
+    //     Marke: "Volvo",
+    //     Modelis: "S50",
+    //     Metai: 2012,
+    //     Spalva: "brown",
+    //     KuroSanaudos: 4,
+    //     KuroTipas: "Dyzelinas"
+    // }, {
+    //     Marke: "Kia",
+    //     Modelis: "Ceed",
+    //     Metai: 2002,
+    //     Spalva: "Grey",
+    //     KuroSanaudos: 8,
+    //     KuroTipas: "Dujos"
+    // }, {
+    //     Marke: "500",
+    //     Modelis: "fiat",
+    //     Metai: 2014,
+    //     Spalva: "balta",
+    //     KuroSanaudos: 7,
+    //     KuroTipas: "Benzinas"
+    // }, {
+    //     Modelis: "Volkswagen",
+    //     Marke: "golf",
+    //     Metai: 2014,
+    //     Spalva: "balta",
+    //     KuroSanaudos: 6,
+    //     KuroTipas: "Dyzelinas"
+    // }, {
+    //     Modelis: "Toyota",
+    //     Marke: "Sienna",
+    //     Metai: 2014,
+    //     Spalva: "bordo",
+    //     KuroSanaudos: 11,
+    //     KuroTipas: "Dujos"
+    // }, {
+    //     Modelis: "BMW",
+    //     Marke: "420",
+    //     Metai: 2014,
+    //     Spalva: "juoda",
+    //     KuroSanaudos: 8,
+    //     KuroTipas: "Dyzelinas"
+    // }, {
+    //     Marke: "Audi",
+    //     Modelis: "A6",
+    //     Metai: "2012",
+    //     Spalva: "Juoda",
+    //     KuroSanaudos: 7,
+    //     KuroTipas: "Dyzelinas"
+    // }, {
+    //     Marke: "BMW",
+    //     Modelis: "5",
+    //     Metai: "2011",
+    //     Spalva: "Balta",
+    //     KuroSanaudos: 10,
+    //     KuroTipas: "Benzinas"
+    // }, {
+    //     Marke: "Toyota",
+    //     Modelis: "Corolla",
+    //     Metai: "2019",
+    //     Spalva: "Raudona",
+    //     KuroSanaudos: 8,
+    //     KuroTipas: "Dujos"
+    // }, {
+    //     Marke: "Mercedes Benz",
+    //     Modelis: "222",
+    //     Metai: "2020",
+    //     Spalva: "Juoda",
+    //     KuroSanaudos: 12,
+    //     KuroTipas: "Benzinas",
+    // }];
+
+    // arrayOfCars = [car1, car2];
+
+    // function gearboxTypes(arrayOfCars) {
+    //     arrayOfCars.forEach(element => {
+    //         element.pavaruDeze = {
+    //             Type: "Automatine",
+    //             Pavaros: 8
+    //         }
+    //     });
+    // }
+
+
+    // function groupBy(arrayOfCars, property) {
+    //     return arrayOfCars.reduce(function(acc, obj) {
+    //         var key = obj[property]
+    //         if (!acc[key]) {
+    //             acc[key] = []
+    //         }
+    //         acc[key].push(obj)
+    //         return acc
+    //     }, {})
+    // }
+
+    // var groupedCars = groupBy(arrayOfCars, Marke)
+
+    // var groupCars = arrayOfCars.reduce((group, arrayOfCars) => {
+    //     var {
+    //         Marke
+    //     } = arrayOfCars;
+    //     group[Marke] = group[Marke] ? ? [];
+    //     group[Marke].push(arrayOfCars);
+    //     return group;
+    // }, {});
+    // console.log(groupCars);
+
+
+    // function GroupCarsByCarMake(array) {
+    //     var carMakes = [];
+    //     var result = [];
+
+    //     array.forEach(car => {
+    //         if (!carMakes.includes(car.Marke)) {
+    //             carMakes.push(car.Marke);
+    //         }
+    //     });
+
+    //     carMakes.forEach(make => {
+    //         var grouped = {
+    //             group: make,
+    //             Cars: []
+    //         }
+
+    //         array.forEach(car => {
+    //             if (grouped.group == car.Marke) {
+    //                 grouped.Cars.push(car);
+    //             }
+    //         });
+
+    //         result.push(grouped);
+    //     });
+
+    //     return result;
+    // }
+    // console.log(GroupCarsByCarMake(arrayOfCars));
+
+    ////////////////////////////////////////////
+
+    // function GroupCarsByCarColor(array) {
+    //     var carColors = [];
+    //     var result = [];
+
+    //     array.forEach(car => {
+    //         if (!carColors.includes(car.Spalva)) {
+    //             carColors.push(car.Spalva);
+    //         }
+    //     });
+
+    //     carColors.forEach(make => {
+    //         var grouped = {
+    //             group: make,
+    //             Cars: []
+    //         }
+
+    //         array.forEach(car => {
+    //             if (grouped.group == car.Spalva) {
+    //                 grouped.Cars.push(car);
+    //             }
+    //         });
+
+    //         result.push(grouped);
+    //     });
+
+    //     return result;
+    // }
+
+    // console.log(GroupCarsByCarColor(arrayOfCars));
+
+    ////////////////////////////////////////////
+
+    // var students = [{
+    //     name: "Mindaugas",
+    //     grades: [10, 5, 7]
+    // }, {
+    //     name: "Jonas",
+    //     grades: [10, 5, 7]
+    // }, {
+    //     name: "Ana",
+    //     grades: [10, 5, 7, 10]
+    // }, ];
+
+    // function averageGrades(people) {
+    //     var studentsWithAverage = [];
+
+    //     people.forEach(person => {
+    //         var gradesSum = person.grades.reduce((previous, current) => previous + current);
+    //         var average = gradesSum / person.grades.length;
+    //         var student = {
+    //             name: person.name,
+    //             averageGrade: average.toFixed(2)
+    //         }
+    //         studentsWithAverage.push(student);
+    //     });
+    //     return studentsWithAverage;
+    // }
+    // console.log(averageGrades(students));
+
+    /////////////////////////////////////////////
+
+    // let students = [{
+    //     name: "Mindaugas",
+    //     subject_grades: [{
+    //         subject_name: "Lietuvių",
+    //         grades: [10, 7, 8]
+    //     }, {
+    //         subject_name: "Matematika",
+    //         grades: [10, 7, 8]
+    //     }, ]
+    // }, {
+    //     name: "Jonas",
+    //     subject_grades: [{
+    //         subject_name: "Lietuvių",
+    //         grades: [5, 7, 8]
+    //     }, {
+    //         subject_name: "Matematika",
+    //         grades: [8, 7, 8]
+    //     }, ]
+    // }, ];
+
+
+    // function StudentAverageSubjectGradeObject(students) {
+
+    //     avrSubjectStudents = [];
+
+    //     students.forEach(student => {
+
+    //         var Subjects = [];
+
+    //         student.subject_grades.forEach(sub => {
+    //             var gradesSum = sub.grades.reduce((prev, current) => prev + current);
+    //             var avarageGrade = gradesSum / sub.grades.length;
+    //             let subject = {
+    //                 subject_name: sub.subject_name,
+    //                 avarageGrade: avarageGrade.toFixed(2)
+    //             };
+    //             Subjects.push(subject);
+    //         });
+
+    //         var avrSubjectStudent = {
+    //             name: student.name,
+    //             subject_grades: Subjects
+    //         };
+
+    //         avrSubjectStudents.push(avrSubjectStudent);
+    //     });
+
+    //     return avrSubjectStudents;
+    // }
+    // console.log(StudentAverageSubjectGradeObject(students));
+
+    // //////////////////////////////////////////////
+
+    // function StudentAverageGradeObjectFromStudentsWithSubjects(students) {
+
+    //     avrSubjectStudents = [];
+
+    //     students.forEach(student => {
+    //         var Subjects = [];
+
+    //         var avarageGrade = 0;
+
+    //         student.subject_grades.forEach(sub => {
+    //             var gradesSum = sub.grades.reduce((prev, current) => prev + current);
+    //             avarageGrade += gradesSum / sub.grades.length;
+    //         });
+
+    //         var avrSubjectStudent = {
+    //             name: student.name,
+    //             avarageGrade: (avarageGrade / student.subject_grades.length).toFixed(2)
+    //         };
+
+    //         avrSubjectStudents.push(avrSubjectStudent);
+    //     });
+
+    //     return avrSubjectStudents;
+    // }
+    // console.log(StudentAverageGradeObjectFromStudentsWithSubjects(students));
+
+    ////////////////////////////////////
+
+    // var array = [2, 2, 4, 5, 89, 81, 5, 84, 984, 514, 21, 24, 842, 5814, 5, 54, 854, 584, 54, 5, 46, 4, 85];
+
+    // //Tradicine
+    // function Tradicine(array) {
+    //     return array.reduce((x, y) => x + y) / array.length;
+    // }
+
+    // //anonymous
+    // var Anonymous = function(array) {
+    //     return array.reduce((x, y) => x + y) / array.length;
+    // }
+
+    // //arrow
+    // var Arrow = (array) => array.reduce((x, y) => x + y) / array.length;
+
+    // console.log(Tradicine(array));
+    // console.log(Anonymous(array));
+    // console.log(Arrow(array));
+
+    ////////////////////////////////////////
+
+    // function factorial(number) {
+    //     if (number === 0) {
+    //         return 1;
+    //     } else {
+    //         return number * factorial(number - 1);
+    //     }
+    // }
+    // console.log(factorial(9))
+
+    ////////////////////////////////////////// arrow funkcija of ^
+
+    // var factorial = (x) => x == 1 ? 1 : x * factorial(x - 1);
+
+    // console.log(factorial(6))
+
+    //////////////////////////////////////////
+
+    // function FibionachiFinder(nth) {
+    //     if (nth <= 1) {
+    //         return nth;
+    //     }
+    //     return FibionachiFinder(nth - 1) + FibionachiFinder(nth - 2);
+    // }
+    // console.log(FibionachiFinder(9))
+
+    //////////////////////////////////////////
+
+    // var FibionachiFinderShort = (nth) => nth <= 1 ? nth : FibionachiFinderShort(nth - 1) + FibionachiFinderShort(nth - 2);
+    // console.log(FibionachiFinderShort(9));
+
+    //////////////////////////////////////////
+
+    // var students = [{
+    //     name: "Mindaugas",
+    //     grades: [10, 5, 7]
+    // }, {
+    //     name: "Jonas",
+    //     grades: [10, 5, 7]
+    // }, {
+    //     name: "Ana",
+    //     grades: [10, 5, 7, 10]
+    // }, ];
+
+    /////////////// EXAMPLE ////////////////////
+    // function StudentsWithAvarageMy(students) {
+    //         var studentsWithAvg = [];
+    //         for (var i = 0; i < students.length; i++) {
+    //             let sum = 0;
+    //             for (let j = 0; j < students[i].grades.length; j++) {
+    //                 sum = sum + students[i].grades[j];
+    //             }
+    //             let avg = sum / students[i].grades.length;
+    //             studentsWithAvg.push({
+    //                 "name": students[i].name,
+    //                 "avg": avg                });
+    //         }
+    //     }
+    //     console.log(StudentsWithAvarageMy(students));
+
+    //////////////ATSAKYMAS/////////////////
+
+    // function AvarageGradeOfStudent(student) {
+    //     let sum = 0;
+    //     for (let j = 0; j < student.grades.length; j++) {
+    //         sum = sum + student.grades[j];
+    //     }
+    //     return sum / student.grades.length;
+    // }
+
+    // console.log(StudentsWithAverageMy(students));
+
+    ///////////////SU REDUCE//////////////
+
+    // function StudentsWithAverageReduce(students) {
+    //     var studentsWithAvg = [];
+    //     for (var i = 0; i < students.length; i++) {
+    //         let sum = students[i].grades.reduce((x, y) => x + y);
+    //         let avg = sum / students[i].grades.length;
+    //         studentsWithAvg.push({
+    //             "name": students[i].name,
+    //             "avg": avg
+    //         });
+    //     }
+    //     return studentsWithAvg;
+    // }
+    // console.log(StudentsWithAverageReduce(students));
+
+    //////////////////////////////////////////
+
+    // class Car {
+
+    //     constructor(make, model, color, engine, basePrice) {
+    //         this.make = make;
+    //         this.model = model;
+    //         this.engine = engine;
+    //         this.color = color;
+    //         this.basePrice = basePrice;
+    //     }
+
+    //     getPrice() {
+    //         return this.basePrice * this.engine.horsePower + this.basePrice / 2 * this.engine.displacement;
+    //     }
+
+    //     getKw() {
+    //         return this.engine.getKw()
+    //     }
+    // }
+
+    // //1.1 uzduotis
+    // class Engine {
+    //     constructor(horsePower, displacement) {
+    //         this.horsePower = horsePower;
+    //         this.displacement = displacement;
+    //     }
+
+    //     getKw() {
+    //         return Math.round(this.horsePower * 0.7457);
+    //     }
+    // }
+
+    // var bmwas = new Car("bmw", "530", "balta", {
+    //     horsePower: 285,
+    //     displacement: 3.0,
+    //     getKw: function() {
+    //         return Math.round(this.horsePower * 0.7457);
+    //     }
+    // }, 20);
+
+    // var volvo = new Car("volvo", "v50", "juoda", new Engine(108, 1.6), 15);
+
+    // console.log(bmwas);
+    // console.log(bmwas.getPrice());
+    // console.log(bmwas.getKw());
+
+    // console.log(volvo);
+    // console.log(volvo.getPrice());
+    // console.log(volvo.engine.getKw());
+
+    // ////////////////////////////////////////////
+
+    // var numArrayOne = [1, 5, 9, 8, 7];
+    // var numArrayTwo = [4, 8, 7, 9, 6, 3, 2, 1, 4];
+
+    // function mergeAndSortArrays(arr1, arr2) {
+    //     return numArrayOne.concat(numArrayTwo).sort();
+    // }
+
+    // console.log(mergeAndSortArrays(numArrayOne, numArrayTwo));
+
+    /////////////////////////////////////////////////
+
+    // var arrayNumber = [12, 64, 365, 6465];
+
+    // function AddtoCustomPlaceInArray(array, place, element) {
+    //     array.splice(place, 0, element);
+    //     return array;
+    // }
+    // console.log(AddtoCustomPlaceInArray(arrayNumber, 2, 50));
+
+    ////////////////////////////////////////////////
+
+    // var arrayNumber = [12, 64, 365, 6465];
+
+    // function removetoCustomPlaceInArray(array, place) {
+    //     return array.slice(0, place).concat(array.slice(place + 1, array.length));
+    // }
+
+    // console.log(removetoCustomPlaceInArray(arrayNumber, 0));
+
+    ///////////////////////////////////////////////
+
+    // const numbers1 = [45, 4, 9, 16, 25];
+
+    // function Multiplication(value, index, array) {
+    //     return value * index + index;
+    // }
+    // console.log(numbers1.map(Multiplication));
+
+    ///////////////////////////////////////////////
+
+    // function arraySuma(previuos, current) {
+    //     return current + previuos;
+    // }
+    // console.log(numbers1.reduce(arraySuma));
+
+    //////////////////////////////////////////////////
+
+    // function evenNumberFilter(value, index, array) {
+    //     return value % 2 === 0;
+    // }
+    // console.log(numbers1.filter(evenNumberFilter));
+
+    /////////////////////////////////////////////////
+</script>
+
+
+
+</body>
+
+</html>

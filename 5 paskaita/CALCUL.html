@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCUL</title>
+
+    <style>
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 1px;
+            row-gap: 2px;
+            width: 250px;
+            height: 450px;
+            text-align: center;
+        }
+        
+        .grid-container>div {
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            font-size: 2em;
+        }
+        
+        .grid-container>:last-child {
+            display: grid;
+            background-color: orange;
+            width: 400%;
+        }
+        
+        .grid-container>:first-child {
+            align-self: stretch;
+            padding-top: 50px;
+        }
+        
+        #display {
+            grid-column: 1 / 5;
+            pointer-events: none;
+            font-size: 50px;
+        }
+        
+        .grid-container>:nth-child(9) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(13) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(5) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(16) {
+            background-color: orange;
+        }
+        
+        .grid-container>:nth-child(17) {
+            background-color: orange;
+        }
+        
+        .grid-container>div:hover {
+            background-color: rgb(12, 184, 184);
+        }
+        
+        .calc-numbers {
+            font-family: 'Space Mono', serif;
+            background: grey;
+            color: white;
+            font-size: 2em;
+            border: 0;
+            text-align: right;
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+
+    <script>
+        var FirstChoice = "";
+        var SecondChoice = "";
+        var IsPlusClicked = false;
+        var IsMinusClicked = false;
+        var IsMultiplicationClicked = false;
+        var IsDivideClicked = false;
+        var isCommaClicked = false;
+        var isSignDoubleClicked = false;
+        var afterEquals = false;
+
+
+        function skaicius(choice) {
+            if (isFirstNumber()) {
+                if (afterEquals) {
+                    FirstChoice = choice;
+                    afterEquals = false;
+                } else {
+                    FirstChoice += choice;
+                }
+                document.getElementById("display").innerHTML = FirstChoice;
+            } else if (isSecondNumber()) {
+                SecondChoice += choice;
+                document.getElementById("display").innerHTML = SecondChoice;
+            }
+        }
+
+        function isFirstNumber() {
+            return (!IsPlusClicked && !IsMinusClicked && !IsMultiplicationClicked && !IsDivideClicked);
+        }
+
+        function isSecondNumber() {
+            return (IsPlusClicked || IsMinusClicked || IsMultiplicationClicked || IsDivideClicked);
+        }
+
+
+
+
+        function PlusSingnClicked() {
+            document.getElementById("display").innerHTML = "+";
+            if (IsPlusClicked || IsMinusClicked || IsMultiplicationClicked || IsDivideClicked) {
+                EqualsSingnClicked();
+            }
+            IsPlusClicked = true;
+            isCommaClicked = false;
+        }
+
+        function minusSingnClicked() {
+            document.getElementById("display").innerHTML = "-";
+            if (IsPlusClicked || IsMinusClicked || IsMultiplicationClicked || IsDivideClicked) {
+                EqualsSingnClicked();
+            }
+            IsMinusClicked = true;
+            isCommaClicked = false;
+        }
+
+        function MultiplyClicked() {
+            document.getElementById("display").innerHTML = "*";
+            if (IsPlusClicked || IsMinusClicked || IsMultiplicationClicked || IsDivideClicked) {
+                EqualsSingnClicked();
+            }
+            IsMultiplicationClicked = true;
+            isCommaClicked = false;
+
+        }
+
+        function DivideClicked() {
+            document.getElementById("display").innerHTML = "/";
+            if (IsPlusClicked || IsMinusClicked || IsMultiplicationClicked || IsDivideClicked) {
+                EqualsSingnClicked();
+            }
+            IsDivideClicked = true;
+            isCommaClicked = false;
+
+        }
+
+        function comma() {
+            if (!isCommaClicked) {
+                if (isFirstNumber()) {
+                    FirstChoice += ".";
+                    document.getElementById("display").innerHTML = FirstChoice;
+                } else if (isSecondNumber()) {
+                    SecondChoice += ".";
+                    document.getElementById("display").innerHTML = SecondChoice;
+                }
+                isCommaClicked = true;
+
+            }
+        }
+
+
+        function EqualsSingnClicked() {
+            if (IsPlusClicked && FirstChoice != -1 && SecondChoice != -1) {
+                document.getElementById("display").innerHTML = parseFloat(FirstChoice) + parseFloat(SecondChoice);
+                clear();
+            } else if (IsMinusClicked && FirstChoice != -1 && SecondChoice != -1) {
+                document.getElementById("display").innerHTML = parseFloat(FirstChoice) - parseFloat(SecondChoice);
+                clear();
+            } else if (IsMultiplicationClicked && FirstChoice != -1 && SecondChoice != -1) {
+                document.getElementById("display").innerHTML = parseFloat(FirstChoice) * parseFloat(SecondChoice);
+                clear();
+            } else if (IsDivideClicked && FirstChoice != -1 && SecondChoice != -1) {
+                document.getElementById("display").innerHTML = parseFloat(FirstChoice) / parseFloat(SecondChoice).toFixed(5);
+                clear();
+            } else {
+                return;
+            }
+
+            FirstChoice = parseFloat(document.getElementById("display").innerHTML);
+            afterEquals = true;
+        }
+
+        function all_clear() {
+            document.getElementById("display").innerHTML = 0;
+            clear();
+        }
+
+        function clear() {
+            SecondChoice = "";
+            IsPlusClicked = false;
+            IsMinusClicked = false;
+            IsMultiplicationClicked = false;
+            IsDivideClicked = false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div id="display"></div>
+        <div onclick="skaicius('7')">7</div>
+        <div onclick="skaicius('8')">8</div>
+        <div onclick="skaicius('9')">9</div>
+        <div onclick="all_clear('')">AC</div>
+        <div onclick="skaicius('4')">4</div>
+        <div onclick="skaicius('5')">5</div>
+        <div onclick="skaicius('6')">6</div>
+        <div onclick="DivideClicked()">/</div>
+        <div onclick="skaicius('1')">1</div>
+        <div onclick="skaicius('2')">2</div>
+        <div onclick="skaicius('3')">3</div>
+        <div onclick="MultiplyClicked()">X</div>
+        <div onclick="skaicius('0')">0</div>
+        <div onclick="comma()">.</div>
+        <div onclick="PlusSingnClicked()" id="Plus">+</div>
+        <div onclick="minusSingnClicked()">-</div>
+        <div onclick="EqualsSingnClicked()" id="Equals">=</div>
+
+    </div>
+</body>
+
+</html>
