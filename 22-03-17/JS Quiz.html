@@ -10,7 +10,9 @@
         body {
             color: white;
             font-family: arial;
+            font-family: sans-serif;
             font-size: 15px;
+            color: black;
         }
         
         #container {
@@ -18,14 +20,15 @@
             background: #9c9393;
             margin: 20px auto;
             overflow: auto;
-            padding: 25px;
-            border
+            padding: 20px;
+            border-style: solid;
+            border-radius: 10px;
         }
         
         header {
             text-align: center;
-            border-top: #fff dashed 1px;
-            border-bottom: #fff dashed 1px;
+            border-bottom: #fff solid 1px;
+            border-width: 2px;
         }
         
         #submit {
@@ -43,20 +46,28 @@
         #submit:hover {
             background-color: rgb(21, 93, 247);
         }
+        
+        #title {
+            font-size: 40px;
+            color: rgb(0, 0, 0);
+            border-bottom: #fff solid;
+        }
     </style>
 </head>
 
 <body>
     <div id="container">
         <header>
-            <h1>JavaScript Quiz'as</h1>
+            <div id="title">JavaScript Quiz'as</div>
             <div id="quiz"></div>
-            <button onclick="validateanswers()" id="submit">Submit</button>
+            <button onclick="validateAnswers()" id="submit">Submit</button>
             <div id="results"></div>
 
 
             <script>
                 const quizContainer = document.getElementById("quiz");
+                const resultsContainer = document.getElementById("results");
+                const submitButton = document.getElementById("submit");
                 var answers = [];
 
 
@@ -92,10 +103,56 @@
                         c: "call myFunction()"
                     },
                     correctAnswer: "b"
+                }, {
+                    question: "How does a FOR loop start?",
+                    answers: {
+                        a: "for (i = 0; i <= 5; i++)",
+                        b: "for (i <= 5; i++)",
+                        c: "for i = 1 to 5",
+                        d: "for (i = 0; i <= 5)"
+                    },
+                    correctAnswer: "a"
+                }, {
+                    question: "How to insert a comment that has more than one line?",
+                    answers: {
+                        a: "//This comment has more than one line//",
+                        b: "<!--This comment has more than one line-->",
+                        c: "/*This comment has more than one line*/"
+                    },
+                    correctAnswer: "c"
+                }, {
+                    question: "JavaScript is the same as Java",
+                    answers: {
+                        a: "True",
+                        b: "False"
+                    },
+                    correctAnswer: "b"
+                }, {
+                    question: "How do you declare a JavaScript variable?",
+                    answers: {
+                        a: "var carName",
+                        b: "variable carName",
+                        c: "v carName",
+                    },
+                    correctAnswer: "a"
+                }, {
+                    question: "Which operator is used to assign a value to a variable?",
+                    answers: {
+                        a: "x",
+                        b: "=",
+                        c: "*",
+                        d: "-"
+                    },
+                    correctAnswer: "a"
+                }, {
+                    question: "Is JavaScript case-sensitive?",
+                    answers: {
+                        a: "No",
+                        b: "Yes",
+                    },
+                    correctAnswer: "b"
                 }];
 
-
-                /// Sioje vietoje bandziau atkurti vaizdavima visu klausimu + atsakymu pasirinkimu. 
                 function showQuestions() {
                     var segmentHtml = [];
                     for (var i = 0; i < questions.length; i++) {
@@ -118,13 +175,14 @@
                     quizContainer.innerHTML = segmentHtml.join('');
                 }
 
-                function validateanswers() {
+                function validateAnswers() {
                     var numCorrect = 0;
 
                     answerElements = document.getElementsByClassName('answers');
 
                     for (var i = 0; i < answers.length; i++) {
-                        var answer;
+                        var answer = "nepasirinkta";
+
                         for (var x = 0; x < answerElements[i].children.length; x++) {
                             if (answerElements[i].children[x].checked) {
                                 answer = answerElements[i].children[x].value;
@@ -132,15 +190,14 @@
                         }
 
                         if (answer == answers[i]) {
-                            document.getElementById(`question${i}`).style.backgroundColor = 'green';
                             numCorrect++;
+                            document.getElementById(`question${i}`).style.backgroundColor = 'green';
                         } else {
                             document.getElementById(`question${i}`).style.backgroundColor = 'red';
                         }
                     }
+                    resultsContainer.innerHTML = numCorrect + ' questions out of ' + questions.length + ' are correct';
                 }
-
-
 
                 showQuestions();
             </script>
