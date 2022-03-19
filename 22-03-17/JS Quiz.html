@@ -6,86 +6,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Quiz</title>
-    <link rel="Styles" href="JS QuizStyle.css">
-    <link>
-</head>
-<!-- <script src="JS QuizQuestions.js"></script> -->
-<script>
-    /// Sis budas rodosi bus patogesnis rasant pacias funkcijas, del kintamuju (questions,answers) taciau man nepavyksta atvaizduoti paciu klausymu narsykleje. 
-
-
-    var theQuestions = [{
-        question: "Inside which HTML element do we put the JavaScript?",
-        answers: {
-            a: "<javascript>",
-            b: "<script>",
-            c: "<js>",
-            d: "<scripting>"
-        },
-        correctAnswer: "b"
-    }, {
-        question: "The external JavaScript file must contain the <script> tag.",
-        answers: {
-            a: "False",
-            b: "True"
-        },
-        correctAnswer: "a"
-    }, {
-        question: "How do you create a function in JavaScript?",
-        answers: {
-            a: "function myFunction()",
-            b: "function = myFunction()",
-            c: "function:myFunction()"
-        },
-        correctAnswer: "a"
-    }, {
-        question: "How do you call a function named 'myFunction'?",
-        answers: {
-            a: "call function myFunction()",
-            b: "myFunction()",
-            c: "call myFunction()"
-        },
-        correctAnswer: "b"
-    }];
-
-
-    /// Sioje vietoje bandziau atkurti vaizdavima visu klausimu + atsakymu pasirinkimu. 
-
-    function showQuestions(questions, quizContainer) {
-        var array = [];
-        var answers;
-
-        for (var i = 0; i < questions.lenght; i++) {
-
-            answers = [];
-
-            for (atsakymai in questions[i].answers) {
-                answers.push(
-                    'label' +
-                    '<input type="radio" name="question' + i + '" value="' + atsakymai + '">' +
-                    atsakymai + ': ' +
-                    questions[i].answers[atsakymai] +
-                    '</label>'
-                );
-            }
-
-            array.push(
-                '<div class="question">' + questions[i].question + '</div>' +
-                '<div class="answers">' + answers.join('') + '</div'
-            );
+    <style>
+        body {
+            color: white;
+            font-family: arial;
+            font-size: 15px;
         }
-
-        quizContainer.innerHTML = array.join('');
-    }
-
-
-    console.log(showQuestions(questions, quizContainer));
-</script>
+        
+        #container {
+            width: 60%;
+            background: #9c9393;
+            margin: 20px auto;
+            overflow: auto;
+            padding: 25px;
+            border
+        }
+        
+        header {
+            text-align: center;
+            border-top: #fff dashed 1px;
+            border-bottom: #fff dashed 1px;
+        }
+        
+        #submit {
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: rgb(14, 82, 185);
+            color: #fff;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        
+        #submit:hover {
+            background-color: rgb(21, 93, 247);
+        }
+    </style>
+</head>
 
 <body>
-    <div id="quiz"></div>
-    <button id="submit">Results</button>
-    <div id="results"></div>
+    <div id="container">
+        <header>
+            <h1>JavaScript Quiz'as</h1>
+            <div id="quiz"></div>
+            <button onclick="validateanswers()" id="submit">Submit</button>
+            <div id="results"></div>
+
+
+            <script>
+                const quizContainer = document.getElementById("quiz");
+                var answers = [];
+
+
+                const questions = [{
+                    question: "Inside which HTML element do we put the JavaScript?",
+                    answers: {
+                        a: "javascript",
+                        b: "script",
+                        c: "js",
+                        d: "scripting"
+                    },
+                    correctAnswer: "b"
+                }, {
+                    question: "The external JavaScript file must contain the script tag.",
+                    answers: {
+                        a: "False",
+                        b: "True"
+                    },
+                    correctAnswer: "a"
+                }, {
+                    question: "How do you create a function in JavaScript?",
+                    answers: {
+                        a: "function myFunction()",
+                        b: "function = myFunction()",
+                        c: "function:myFunction()"
+                    },
+                    correctAnswer: "a"
+                }, {
+                    question: "How do you call a function named 'myFunction'?",
+                    answers: {
+                        a: "call function myFunction()",
+                        b: "myFunction()",
+                        c: "call myFunction()"
+                    },
+                    correctAnswer: "b"
+                }];
+
+
+                /// Sioje vietoje bandziau atkurti vaizdavima visu klausimu + atsakymu pasirinkimu. 
+                function showQuestions() {
+                    var segmentHtml = [];
+                    for (var i = 0; i < questions.length; i++) {
+                        answers.push(questions[i].correctAnswer);
+                        var answersHtml = [];
+                        for (atsakymai in questions[i].answers) {
+                            answersHtml.push(
+                                '<input type="radio" name="question' + i + '" value="' + atsakymai + '">' +
+                                atsakymai + ': ' +
+                                questions[i].answers[atsakymai] +
+                                ''
+                            );
+                        }
+                        segmentHtml.push(
+                            '<div class="question" id="question' + i + '"><h4>' + questions[i].question + '</h4></div>' +
+                            '<div class="answers" id="answers' + i + '">' + answersHtml.join('') + '</div><br>'
+                        );
+                    }
+
+                    quizContainer.innerHTML = segmentHtml.join('');
+                }
+
+                function validateanswers() {
+                    var numCorrect = 0;
+
+                    answerElements = document.getElementsByClassName('answers');
+
+                    for (var i = 0; i < answers.length; i++) {
+                        var answer;
+                        for (var x = 0; x < answerElements[i].children.length; x++) {
+                            if (answerElements[i].children[x].checked) {
+                                answer = answerElements[i].children[x].value;
+                            }
+                        }
+
+                        if (answer == answers[i]) {
+                            document.getElementById(`question${i}`).style.backgroundColor = 'green';
+                            numCorrect++;
+                        } else {
+                            document.getElementById(`question${i}`).style.backgroundColor = 'red';
+                        }
+                    }
+                }
+
+
+
+                showQuestions();
+            </script>
+
 </body>
 
 </html>
