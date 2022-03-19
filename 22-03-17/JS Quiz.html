@@ -15,18 +15,16 @@
 
 <body>
     <div id="quiz"></div>
-    <button id="submit">Results</button>
+    <button onclick="validateAwnsers()" id="submit">Results</button>
     <div id="results"></div>
-
 
     <script>
         /// Sis budas rodosi bus patogesnis rasant pacias funkcijas, del kintamuju (questions,answers) taciau man nepavyksta atvaizduoti paciu klausymu narsykleje. 
         const quizContainer = document.getElementById("quiz");
-        var segmentHtml = [];
         var awnsers = [];
 
 
-        var theQuestions = [{
+        const questions = [{
             question: "Inside which HTML element do we put the JavaScript?",
             answers: {
                 a: "javascript",
@@ -62,34 +60,51 @@
 
 
         /// Sioje vietoje bandziau atkurti vaizdavima visu klausimu + atsakymu pasirinkimu. 
-        function showQuestions(questions) {
-
+        function showQuestions() {
+            var segmentHtml = [];
             for (var i = 0; i < questions.length; i++) {
                 awnsers.push(questions[i].correctAnswer);
-
                 var answersHtml = [];
                 for (atsakymai in questions[i].answers) {
                     answersHtml.push(
                         '<input type="radio" name="question' + i + '" value="' + atsakymai + '">' +
                         atsakymai + ': ' +
                         questions[i].answers[atsakymai] +
-                        '</label>'
+                        ''
                     );
                 }
                 segmentHtml.push(
-                    '<div class="question"><h4>' + questions[i].question + '</h4></div>' +
-                    '<div class="answers">' + answersHtml.join('') + '</div><br>'
+                    '<div class="question" id="question' + i + '"><h4>' + questions[i].question + '</h4></div>' +
+                    '<div class="answers" id="answers' + i + '">' + answersHtml.join('') + '</div><br>'
                 );
             }
 
-            var htmlString = segmentHtml.join('');
-
-            quizContainer.innerHTML = htmlString;
+            quizContainer.innerHTML = segmentHtml.join('');
         }
 
+        function validateAwnsers() {
 
-        console.log(showQuestions(theQuestions));
+            awnserElements = document.getElementsByClassName('answers');
+
+            for (var i = 0; i < awnsers.length; i++) {
+                var awnser;
+                for (var x = 0; x < awnserElements[i].children.length; x++) {
+                    if (awnserElements[i].children[x].checked) {
+                        awnser = awnserElements[i].children[x].value;
+                    }
+                }
+
+                if (awnser == awnsers[i]) {
+                    document.getElementById(`question${i}`).style.backgroundColor = 'green';
+                } else {
+                    document.getElementById(`question${i}`).style.backgroundColor = 'red';
+                }
+            }
+        }
+
+        showQuestions();
     </script>
+
 </body>
 
 </html>
